@@ -1,0 +1,14 @@
+@media screen and (max-width: 375px){
+    *{
+        margin: 0;
+        padding: 0;
+    }
+
+/*  Classes  */
+    .upper{
+        background-color: black;
+    }
+    .lower{
+        background-color: black;
+    }
+}
