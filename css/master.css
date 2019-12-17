@@ -1,83 +1,169 @@
-@media screen and (max-width: 375px){
-    *{
+:root {
+
+}
+
+@media screen and (max-width: 375px) {
+    * {
         margin: 0;
         padding: 0;
     }
 
-/*  Classes  */
-    .container{
+    body {
+        height: 100vh;
+        overflow-y: hidden;
+    }
+    input[type=checkbox] {
+        display:none;
+    }
+
+    input[type=checkbox] + label {
+        background-image: url("../img/eye.png");
+        height: 16px;
+        width: 16px;
+        display:inline-block;
+        padding: 0 0 0 0;
+        z-index: 1;
+    }
+
+    input[type=checkbox]:checked + label {
+        background-image: url("../img/closed eye.jpeg");
+        height: 16px;
+        width: 16px;
+        display:inline-block;
+        padding: 0 0 0 0;
+        z-index: 1;
+    }
+
+    /*  Classes  */
+    .container {
         display: grid;
         grid-template-columns: auto 1fr auto;
         grid-template-rows: auto auto auto;
         height: 100vh;
     }
-    .upper{
+
+    .upper {
         background-color: black;
-    }
-    .lower{
-        background-color: black;
-    }
-    .container__form{
-          grid-row: 2/3;
     }
 
-    .container__upper{
+    .lower {
+        background-color: black;
+    }
+
+    .container__form {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-row: 2/3;
+    }
+
+    .invalid__placeholder::-webkit-input-placeholder {
+        color: red;
+    }
+
+    .container__upper {
         grid-row: 1/2;
         position: relative;
-        background-color: #fff;
         width: 100%;
         -webkit-box-sizing: border-box;
         -moz-box-sizing: border-box;
         box-sizing: border-box;
         padding: 60px 20px;
+        z-index: -1;
     }
 
-        .container__upper:after{
-            grid-row: 1/2;
-            position: absolute;
-            width: 100%;
-            height: 40vh;
-            content: '';
-            background: #219A94;
-            top: -16.5em;
-            right: 0;
-            bottom: 0;
-            left: 0;
-            z-index: 1;
-            transform-origin: top right;
-            transform: skewY(-25deg);
-        }
+    .container__upper:after {
+        grid-row: 1/2;
+        position: absolute;
+        width: 100%;
+        height: 40vh;
+        content: '';
+        background: #219A94;
+        top: -16.5em;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: 1;
+        transform-origin: top right;
+        transform: skewY(-25deg);
+    }
 
-    .container__lower{
+    .container__lower {
         grid-row: 3/4;
         position: relative;
-        background-color: #fff;
         width: 100%;
         -webkit-box-sizing: border-box;
         -moz-box-sizing: border-box;
         box-sizing: border-box;
         padding: 60px 20px;
+        top: -6em;
+        z-index: -1;
     }
 
-        .container__lower:after{
-            grid-row: 3/4;
-            position: absolute;
-            width: 100%;
-            height: 40vh;
-            content: '';
-            background: #219A94;
-            top: 4.55em;
-            right: 0;
-            bottom: 0;
-            left: 0;
-            z-index: 1;
-            transform-origin: top right;
-            transform: skewY(-25deg);
-        }
+    .container__lower:after {
+        grid-row: 3/4;
+        position: absolute;
+        width: 100%;
+        height: 40vh;
+        content: '';
+        background: #219A94;
+        top: 7.9em;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: 1;
+        transform-origin: top right;
+        transform: skewY(-25deg);
+    }
 
-    .container__form--logo{
+    .container__form--logo {
         -webkit-border-radius: 50%;
         -moz-border-radius: 50%;
         border-radius: 50%;
+        margin: -6.2em auto;
+        grid-column: 1/4;
+    }
+
+    .container__form--content {
+        grid-column: 2/3;
+        margin: 5em auto -7em auto;
+    }
+
+    .container__content--input {
+        width: 100%;
+        font-size: 1em;
+        padding: 9px 4px;
+        margin: 8px 0;
+        display: block;
+        border: 1px solid black;
+        border-radius: 4px;
+        box-sizing: border-box;
+    }
+
+    .container__content--button{
+        width: 100%;
+        font-size: 1.4em;
+        background-color: grey;
+        color: white;
+        padding: 7px 10px;
+        margin: 8px 0;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+
+    .container__content--sbutton{
+        width: 100%;
+        font-size: .8em;
+        background-color: lightgray;
+        color: white;
+        padding: 7px 10px;
+        margin: 8px 0;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+
+    .container__content--img{
+        width: 2em;
     }
 }

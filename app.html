@@ -15,11 +15,13 @@
 
                 <div class="container__form">
                     <img class="container__form--logo" src="img/logo.png" alt="">
-                    <form action="">
-                        <label for="Username"><input name="Username" id="Username" placeholder="Username Here" type="text"></label>
-                        <label for="password"><input name="password" id="password" placeholder="password Here" type="text"></label>
-                        <input type="button" value="Login">
-                        <input type="button" value="forgot Password">
+                    <form name="form" class="container__form--content" method="post">
+                        <label for="Username"><input class="container__content--input" name="Username" id="Username" placeholder="Username here" type="text" required></label>
+                        <label for="password"><input class="container__content--input" name="password" id="Password" placeholder="Password here" type="password" required>
+                            <input type='checkbox' name='password' value='valuable' id="passwordc"/><label for="passwordc"></label></label>
+
+                        <button class="container__content--button" id="submit" type="button" value="Login" onclick="validateFrom()">Login</button>
+                        <input class="container__content--sbutton" id="forgotten" type="button" value="forgot Password">
                     </form>
                 </div>
 
