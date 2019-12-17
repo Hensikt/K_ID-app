@@ -25,6 +25,7 @@ function validateFrom() {
     if (password === "somepass" && username === "U3254") {
         location.href = 'patient.html';
         return true
+
     } else {
         U.style.cssText = 'border: 1px solid red;';
         U.placeholder = "Invalid User";
@@ -36,12 +37,32 @@ function validateFrom() {
     }
 }
 
-function toggler(e) {
-    if (e.innerHTML === 'Show'){
-        e.innerHTML = 'hide';
-        document.getElementById('Password').type = "text";
+function toggler() {
+    let check = document.getElementById("Password");
+    let eye = document.getElementById("imgEye");
+    if (check.type === "password") {
+        check.type = "text";
+        eye.style.backgroundImage = "url('img/closed_eye.png')";
     } else {
-        e.innerHTML = 'Show';
-        document.getElementById('Password').type = "password";
+        check.type = "password";
+        eye.style.backgroundImage = "url('img/eye.png')";
     }
+}
+
+function emailSend() {
+    let mail = document.forms["form"]["Email"].value;
+    let E = document.getElementById("Email");
+    if (mail.includes('@gmail.com') || mail.includes('@hotmail.com')) {
+        E.value = "";
+        E.style.cssText = 'border: 1px solid green; color: green;';
+        E.classList.add("valid__placeholder");
+        E.placeholder = "Email sended";
+        location.href = 'app.html';
+    } else {
+        E.value = "";
+        E.style.cssText = 'border: 1px solid red;';
+        E.placeholder = "Invalid Email";
+        E.classList.add("invalid__placeholder");
+    }
+
 }

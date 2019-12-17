@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="Bjørn Emmaneel" name="author">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <title>Forgotten password</title>
+    <link rel="stylesheet" href="css/master.css">
+</head>
+<body>
+<div class="container__upper"></div>
+<div class="container__form--forgot">
+    <form name="form" class="container__form--content">
+        <label for="Email"><input class="container__content--input" name="Email" id="Email" placeholder="Email" type="text" required></label>
+        <div><p id="output"></p></div>
+        <button class="container__content--button" type="button" id="submit" value="submit" onclick="emailSend()">Submit</button>
+    </form>
+</div>
+<div class="container__lower--forgot"></div>
+<script src="javascript/script.js"></script>
+</body>
+</html>

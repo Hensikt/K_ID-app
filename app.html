@@ -17,11 +17,11 @@
                     <img class="container__form--logo" src="img/logo.png" alt="">
                     <form name="form" class="container__form--content" method="post">
                         <label for="Username"><input class="container__content--input" name="Username" id="Username" placeholder="Username here" type="text" required></label>
-                        <label for="password"><input class="container__content--input" name="password" id="Password" placeholder="Password here" type="password" required>
-                            <input type='checkbox' name='password' value='valuable' id="passwordc"/><label for="passwordc"></label></label>
+                        <label for="password"><input class="container__content--input" name="password" id="Password" placeholder="Password here" type="password" required></label>
+                        <div id="imgEye" class="container__content--img"><input type='checkbox'  class="passwordc" name='password' value='valuable' id="passwordc"/><label for="passwordc" onclick="toggler()"></label></div>
 
                         <button class="container__content--button" id="submit" type="button" value="Login" onclick="validateFrom()">Login</button>
-                        <input class="container__content--sbutton" id="forgotten" type="button" value="forgot Password">
+                        <a href="forgotpass.html"><button class="container__content--sbutton" id="forgotten" type="button" value="forgot Password" onclick="forgotten()">Forgot Password</button></a>
                     </form>
                 </div>
 
